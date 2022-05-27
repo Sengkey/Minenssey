@@ -119,10 +119,9 @@
               data-video-id="{{ block.settings.video_url.id }}"
               data-block-id="{{ block.id }}">
            
-              	{% assign external_videos = block.settings.video_url | where: "media_type", "external_video" %}
-{% for external_video in external_videos %}
-  {{ external_video.external_id }}
-{% endfor %}
+              	{% if block.settings.video_url.featured_media.media_type == "external_video" %}
+                  {{ block.settings.video_url.featured_media | external_video_url: loop: "1", muted: "1" |  external_video_tag }}
+                {% endif %}
 
             
           </div>
