@@ -722,22 +722,22 @@ class SlideshowComponent extends SliderComponent {
       const video = item.querySelector('video');
       const videoIframe = item.querySelector('iframe');
       const videoType = videoIframe && videoIframe.src.indexOf("https://www.youtube.com") > -1 ? "youtube" : videoIframe && videoIframe.src.indexOf("https://www.vimeo.com") > -1 ? "vimeo" : videoIframe && videoIframe.src.indexOf(".mp4") > -1 ? "mp4" : undefined;
-      console.log(videoType)
+      const isMobile = window.innerWidth < 600;
       const button = item.querySelector('a');
       if (index === this.currentPage - 1) {
         if (button) button.removeAttribute('tabindex');
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
-        if (videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
-        if (videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*')
-        if (videoType == 'mp4') video.play();
+        if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
+        if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*')
+        if (!isMobile && videoType == 'mp4') video.play();
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
         item.setAttribute('tabindex', '-1');
-        if (videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-        if (videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"event":"command","func":"pause","args":""}', '*')
-        if (videoType == 'mp4') video.pause();
+        if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+        if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"event":"command","func":"pause","args":""}', '*')
+        if (!isMobile && videoType == 'mp4') video.pause();
       }
     });
   }
