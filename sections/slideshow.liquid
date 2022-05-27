@@ -119,7 +119,7 @@
               data-video-id="{{ block.settings.video_url.id }}"
               data-block-id="{{ block.id }}">
            
-              	{% assign external_videos = product.media | where: "media_type", "external_video" %}
+              	{% assign external_videos = block.settings.video_url | where: "media_type", "external_video" %}
 {% for external_video in external_videos %}
   {{ external_video.external_id }}
 {% endfor %}
