@@ -1,6 +1,8 @@
 $( document ).ready(function() {
   
   
-  console.log("ready")
+  /* Slideshow */
+  var allSlideshowComponents = $('slideshow-component');
+  console.log(allSlideshowComponents)
   
 });
