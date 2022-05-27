@@ -720,10 +720,12 @@ class SlideshowComponent extends SliderComponent {
   setSlideVisibility() {
     this.sliderItemsToShow.forEach((item, index) => {
       const button = item.querySelector('a');
+      const video = item.querySelector('video');
       if (index === this.currentPage - 1) {
         if (button) button.removeAttribute('tabindex');
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
+        if (video) console.log("video",video)
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
