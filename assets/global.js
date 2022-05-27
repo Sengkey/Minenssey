@@ -719,16 +719,19 @@ class SlideshowComponent extends SliderComponent {
 
   setSlideVisibility() {
     this.sliderItemsToShow.forEach((item, index) => {
-      console.log("SSS",item.querySelector('.slideshow__video video, .slideshow__video iframe'),index)
+      const video = item.querySelector('video');
+      const videoIframe = item.querySelector('iframe');
       const button = item.querySelector('a');
       if (index === this.currentPage - 1) {
         if (button) button.removeAttribute('tabindex');
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
+        if(videoIframe) videoIframe.playVideo();
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
         item.setAttribute('tabindex', '-1');
+        if(videoIframe) videoIframe.pauseVideo();
       }
     });
   }
