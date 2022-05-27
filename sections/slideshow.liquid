@@ -118,8 +118,10 @@
               data-video-type="{{ block.settings.video_url.type }}"
               data-video-id="{{ block.settings.video_url.id }}"
               data-block-id="{{ block.id }}">
-           
-              	{{ block.settings.video_url.media_type }}
+              
+              <div class="responsive-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}" frameborder="0" allowfullscreen></iframe>
+              </div>
 
             
           </div>
