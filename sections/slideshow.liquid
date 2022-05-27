@@ -643,230 +643,188 @@
           }
         },
         {
-          "type": "header",
-          "content": {
-            "cs": "Text",
-            "da": "Tekst",
-            "de": "Text",
-            "en": "Text",
-            "es": "Texto",
-            "fi": "Teksti",
-            "fr": "Texte",
-            "it": "Testo",
-            "ja": "テキスト",
-            "ko": "텍스트",
-            "nb": "Tekst",
-            "nl": "Tekst",
-            "pl": "Tekst",
-            "pt-BR": "Texto",
-            "pt-PT": "Texto",
-            "sv": "Text",
-            "th": "ข้อความ",
-            "tr": "Metin",
-            "vi": "Văn bản",
-            "zh-CN": "文本",
-            "zh-TW": "文字"
-          }
+          "type": "text",
+          "id": "heading",
+          "default": "Image slide",
+          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
         },
         {
           "type": "text",
-          "id": "title",
-          "label": {
-            "cs": "Nadpis",
-            "da": "Overskrift",
-            "de": "Titel",
-            "en": "Heading",
-            "es": "Título",
-            "fi": "Otsake",
-            "fr": "En-tête",
-            "it": "Titolo",
-            "ja": "見出し",
-            "ko": "제목",
-            "nb": "Overskrift",
-            "nl": "Kop",
-            "pl": "Nagłówek",
-            "pt-BR": "Título",
-            "pt-PT": "Título",
-            "sv": "Rubrik",
-            "th": "ส่วนหัว",
-            "tr": "Başlık",
-            "vi": "Tiêu đề",
-            "zh-CN": "标题",
-            "zh-TW": "標題"
-          },
-          "default": {
-            "cs": "Video prezentace",
-            "da": "Diasshow-video",
-            "de": "Präsentationsvideo",
-            "en": "Slideshow video",
-            "es": "Video de presentación",
-            "fi": "Diaesitysvideo",
-            "fr": "Diaporama vidéo",
-            "it": "Video presentazione",
-            "ja": "スライドショーのビデオ",
-            "ko": "슬라이드 동영상",
-            "nb": "Lysbildefremvisning med video",
-            "nl": "Video in diavoorstelling",
-            "pl": "Film z pokazu slajdów",
-            "pt-BR": "Vídeo de apresentação de slides",
-            "pt-PT": "Vídeo de apresentação de diapositivos",
-            "sv": "Slideshow video",
-            "th": "วิดีโอสไลด์โชว์",
-            "tr": "Slayt gösterisi videosu",
-            "vi": "Video bản trình chiếu",
-            "zh-CN": "幻灯片放映视频",
-            "zh-TW": "素材輪播影片"
-          }
+          "id": "subheading",
+          "default": "Tell your brand's story through images",
+          "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
         },
         {
           "type": "text",
-          "id": "button",
-          "label": {
-            "cs": "Nadpis snímku",
-            "da": "Titel på dias",
-            "de": "Folientitel",
-            "en": "Slide title",
-            "es": "Título de diapositiva",
-            "fi": "Dian otsikko",
-            "fr": "Titre de la diapositive",
-            "it": "Titolo slide",
-            "ja": "スライドタイトル",
-            "ko": "슬라이드",
-            "nb": "Tittel på lysbilde",
-            "nl": "Diatitel",
-            "pl": "Tytuł slajdu",
-            "pt-BR": "Título do slide",
-            "pt-PT": "Título do diapositivo",
-            "sv": "Bildspelstitel",
-            "th": "ชื่อสไลด์",
-            "tr": "Slayt başlığı",
-            "vi": "Tiêu đề trang chiếu",
-            "zh-CN": "幻灯片标题",
-            "zh-TW": "投影片標題"
-          },
-          "default": {
-            "cs": "Nadpis snímku",
-            "da": "Titel på dias",
-            "de": "Folientitel",
-            "en": "Slide title",
-            "es": "Título de diapositiva",
-            "fi": "Dian otsikko",
-            "fr": "Titre de la diapositive",
-            "it": "Titolo slide",
-            "ja": "スライドタイトル",
-            "ko": "슬라이드 제목",
-            "nb": "Tittel på lysbilde",
-            "nl": "Diatitel",
-            "pl": "Tytuł slajdu",
-            "pt-BR": "Título do slide",
-            "pt-PT": "Título do diapositivo",
-            "sv": "Bildspelstitel",
-            "th": "ชื่อสไลด์",
-            "tr": "Slayt başlığı",
-            "vi": "Tiêu đề trang chiếu",
-            "zh-CN": "幻灯片标题",
-            "zh-TW": "投影片標題"
-          },
-          "info": {
-            "cs": "Zobrazí se jen v případě, že v prezentaci nastavíte více než jeden snímek.",
-            "da": "Vises kun, hvis du indstiller mere end én dias i diasshowet",
-            "de": "Wird nur angezeigt, wenn der Präsentation mehrere Folien hinzugefügt werden",
-            "en": "Only shows if you set more than one slide in the slideshow",
-            "es": "Solo se muestra si configuras más de una diapositiva en la presentación de diapositivas",
-            "fi": "Näytetään vain, jos olet asettanut diaesitykseen useamman kuin yhden dian",
-            "fr": "Ne s'affiche que si vous avez défini plusieurs diapositives dans le diaporama",
-            "it": "Appare solo se imposti più di una slide nella presentazione",
-            "ja": "スライドショーに複数のスライドを設定した場合のみ表示されます。",
-            "ko": "슬라이드 쇼에 슬라이드를 두 개 이상 설정 한 경우에만 표시됩니다.",
-            "nb": "Vises bare hvis du angir mer enn et lysbilde i lysbildefremvisningen",
-            "nl": "Wordt alleen weergegeven als je meer dan één dia instelt in de diavoorstelling",
-            "pl": "Wyświetla się tylko, jeżeli w pokazie slajdów ustawiono więcej niż jeden slajd",
-            "pt-BR": "Aparece apenas se você definir mais de um slide na apresentação de slides",
-            "pt-PT": "Apenas visível quando define mais do que um diapositivo na apresentação de diapositivos",
-            "sv": "Visar bara om du ställer in mer än en bild i bildspelet",
-            "th": "แสดงเฉพาะเมื่อคุณตั้งค่ามากกว่าหนึ่งสไลด์ในสไลด์โชว์",
-            "tr": "Slayt gösterisinde birden fazla slayt oluşturduğunuzda görünür",
-            "vi": "Chỉ hiển thị nếu bạn đặt nhiều trang chiếu trong bản trình chiếu",
-            "zh-CN": "仅当您在幻灯片放映中设置了多张幻灯片时显示",
-            "zh-TW": "如果您在素材輪播內設定多張投影片才會顯示此項目"
-          }
-        },
-        {
-          "type": "text",
-          "id": "cta",
-          "label": {
-            "cs": "Text tlačítka",
-            "da": "Knaptekst",
-            "de": "Schaltflächenbeschriftung",
-            "en": "Button label",
-            "es": "Etiqueta de botón",
-            "fi": "Tekstipainike",
-            "fr": "Texte du bouton",
-            "it": "Etichetta pulsante",
-            "ja": "ボタンのラベル",
-            "ko": "버튼 레이블",
-            "nb": "Knappetikett",
-            "nl": "Knoplabel",
-            "pl": "Przycisk z etykietą",
-            "pt-BR": "Etiqueta de botão",
-            "pt-PT": "Etiqueta do botão",
-            "sv": "Knappetikett",
-            "th": "ป้ายกำกับปุ่ม",
-            "tr": "Düğme etiketi",
-            "vi": "Nhãn nút",
-            "zh-CN": "按钮标签",
-            "zh-TW": "按鈕標籤"
-          },
-          "default": {
-            "cs": "Zobrazit další",
-            "da": "Se flere",
-            "de": "Mehr anzeigen",
-            "en": "View more",
-            "es": "Ver más",
-            "fi": "Näytä lisää",
-            "fr": "Voir plus",
-            "it": "Visualizza altro",
-            "ja": "もっと見る",
-            "ko": "자세히 보기",
-            "nb": "Vis mer",
-            "nl": "Meer bekijken",
-            "pl": "Wyświetl więcej",
-            "pt-BR": "Ver mais",
-            "pt-PT": "Ver mais",
-            "sv": "Visa mer",
-            "th": "ดูเพิ่มเติม",
-            "tr": "Daha fazlasını görüntüle",
-            "vi": "Xem thêm",
-            "zh-CN": "查看更多",
-            "zh-TW": "檢視更多"
-          }
+          "id": "button_label",
+          "default": "Button label",
+          "label": "t:sections.slideshow.blocks.slide.settings.button_label.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.button_label.info"
         },
         {
           "type": "url",
-          "id": "cta_link",
-          "label": {
-            "cs": "Tlačítkový odkaz",
-            "da": "Knaplink",
-            "de": "Schaltflächenlink",
-            "en": "Button link",
-            "es": "Enlace de botón",
-            "fi": "Painikelinkki",
-            "fr": "Lien du bouton",
-            "it": "Link pulsante",
-            "ja": "ボタンのリンク",
-            "ko": "버튼 링크",
-            "nb": "Kobling for knapp",
-            "nl": "Knoplink",
-            "pl": "Link przycisku",
-            "pt-BR": "Link de botão",
-            "pt-PT": "Ligação do botão",
-            "sv": "Knapplänk",
-            "th": "ลิงก์ปุ่ม",
-            "tr": "Düğme bağlantısı",
-            "vi": "Liên kết trên nút",
-            "zh-CN": "按钮链接",
-            "zh-TW": "按鈕連結"
-          }
+          "id": "link",
+          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary",
+          "label": "t:sections.slideshow.blocks.slide.settings.secondary_style.label",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "box_align",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__1.label"
+            },
+            {
+              "value": "top-center",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__2.label"
+            },
+            {
+              "value": "top-right",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__3.label"
+            },
+            {
+              "value": "middle-left",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__4.label"
+            },
+            {
+              "value": "middle-center",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__5.label"
+            },
+            {
+              "value": "middle-right",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__6.label"
+            },
+            {
+              "value": "bottom-left",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__7.label"
+            },
+            {
+              "value": "bottom-center",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__8.label"
+            },
+            {
+              "value": "bottom-right",
+              "label": "t:sections.slideshow.blocks.slide.settings.box_align.options__9.label"
+            }
+          ],
+          "default": "middle-center",
+          "label": "t:sections.slideshow.blocks.slide.settings.box_align.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.box_align.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_text_box",
+          "label": "t:sections.slideshow.blocks.slide.settings.show_text_box.label",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.option_3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment.label"
+        },
+        {
+          "type": "range",
+          "id": "image_overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "t:sections.slideshow.blocks.slide.settings.image_overlay_opacity.label",
+          "default": 0
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "background-1",
+              "label": "t:sections.all.colors.background_1.label"
+            },
+            {
+              "value": "background-2",
+              "label": "t:sections.all.colors.background_2.label"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "background-1",
+          "label": "t:sections.all.colors.label",
+          "info": "t:sections.slideshow.blocks.slide.settings.color_scheme.info"
+        },
+        {
+          "type": "header",
+          "content": "t:sections.slideshow.settings.mobile.content"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment_mobile",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.slideshow.blocks.slide.settings.text_alignment_mobile.label"
         }
       ]
     }
