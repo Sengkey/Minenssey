@@ -119,7 +119,7 @@
               data-video-id="{{ block.settings.video_url.id }}"
               data-block-id="{{ block.id }}">
             
-              {{ block.settings.video_url | external_video_tag }}
+              {{ block.settings.video_url | external_video_url: color: "white" |  external_video_tag }}
 
             
           </div>
