@@ -721,7 +721,7 @@ class SlideshowComponent extends SliderComponent {
     this.sliderItemsToShow.forEach((item, index) => {
       const video = item.querySelector('video');
       const videoIframe = item.querySelector('iframe');
-      const media = item.querySelector('.slideshow__media');
+      const media = item.querySelector('.slideshow__media .slideshow__video');
 //       const videoType = slide.children[0].childNodes[2].dataset.videoType
       console.log(media)
       const button = item.querySelector('a');
