@@ -5,7 +5,7 @@ $( document ).ready(function() {
   const allSlideshowComponents = $('slideshow-component');
   for(let i = 0; i<allSlideshowComponents.length;i++) {
     const slideshow = allSlideshowComponents[i]
-    const slideItems = slideshow.querySelector('.slideshow__slide');
+    const slideItems = slideshow.querySelectorAll('.slideshow__slide');
     console.log(slideItems, i)
   }
   
