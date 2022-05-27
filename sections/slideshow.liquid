@@ -120,7 +120,7 @@
               data-block-id="{{ block.id }}">
            
               {% assign video = block.settings.video_url | external_video_tag  | split: 'src="' %}
- 			  {% assign v  = video[1] | split: '"' %}
+ 			  {% assign v = video[1] | split: '"' %}
               
               <div class="responsive-video">
                 <iframe width="560" height="315" src="{{ v }}" frameborder="0" allowfullscreen></iframe>
