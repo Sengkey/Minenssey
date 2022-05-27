@@ -2,6 +2,23 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+.responsive-video {
+  padding-bottom: 56.25%; /* for 16:9 ratio */
+  padding-top: 25px;
+  position: relative;
+  height: 0;
+}
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+{%- endstyle -%}
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
@@ -120,7 +137,21 @@
               data-block-id="{{ block.id }}">
               
               <div class="responsive-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}" frameborder="0" allowfullscreen></iframe>
+                {%- if block.settings.video_url.type == "youtube" -%}
+              		<iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?color=white&amp;controls=1&amp;enablejsapi=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0"/>
+              	{%- else if block.settings.video_url.type == "vimeo" -%}
+                  <iframe
+                    frameborder="0"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen="allowfullscreen"
+                    src="https://player.vimeo.com/video/{{ block.settings.video_url.id }}?byline=0&amp;controls=1&amp;playsinline=1&amp;title=0&amp;loop=1&amp;muted=1"
+                    title=""
+                  ></iframe>
+                {%- else -%}
+            		<video width="320" height="240" controls>
+                      <source src="{{ block.settings.video_url }}" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+          		{%- endif -%}
               </div>
 
             
