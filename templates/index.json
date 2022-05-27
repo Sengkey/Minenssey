@@ -211,6 +211,24 @@
     "165363116942f8a1a4": {
       "type": "slideshow",
       "blocks": {
+        "d6e6ef9e-4f7f-418c-a780-f3fb2f1338e6": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "heading": "Video slide xxxx",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
         "16536311692610df54-0": {
           "type": "slide",
           "settings": {
@@ -244,30 +262,12 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
-        },
-        "d6e6ef9e-4f7f-418c-a780-f3fb2f1338e6": {
-          "type": "video",
-          "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-            "heading": "Video slide xxxx",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
         }
       },
       "block_order": [
+        "d6e6ef9e-4f7f-418c-a780-f3fb2f1338e6",
         "16536311692610df54-0",
-        "16536311692610df54-1",
-        "d6e6ef9e-4f7f-418c-a780-f3fb2f1338e6"
+        "16536311692610df54-1"
       ],
       "settings": {
         "layout": "full_bleed",
