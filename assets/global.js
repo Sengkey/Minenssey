@@ -718,8 +718,8 @@ class SlideshowComponent extends SliderComponent {
   }
 
   setSlideVisibility() {
-    console.log("AAAAA")
     this.sliderItemsToShow.forEach((item, index) => {
+      console.log(item)
       const button = item.querySelector('a');
       if (index === this.currentPage - 1) {
         if (button) button.removeAttribute('tabindex');
