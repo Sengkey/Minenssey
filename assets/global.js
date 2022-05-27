@@ -728,14 +728,14 @@ class SlideshowComponent extends SliderComponent {
         if (button) button.removeAttribute('tabindex');
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
-        if (videoType == 'youtube') videoIframe.playVideo();
+        if (videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
         if (videoType == 'vimeo') videoIframe.play();
         if (videoType == 'mp4') video.play();
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
         item.setAttribute('tabindex', '-1');
-        if (videoType == 'youtube') videoIframe.pauseVideo();
+        if (videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
         if (videoType == 'vimeo') videoIframe.pause();
         if (videoType == 'mp4') video.pause();
       }
