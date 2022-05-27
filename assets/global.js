@@ -729,14 +729,14 @@ class SlideshowComponent extends SliderComponent {
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
-        if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*')
+        if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"play"}', '*');
         if (!isMobile && videoType == 'mp4') video.play();
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
         item.setAttribute('tabindex', '-1');
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-        if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"event":"command","func":"pause","args":""}', '*')
+        if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"pause"}', '*');
         if (!isMobile && videoType == 'mp4') video.pause();
       }
     });
