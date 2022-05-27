@@ -118,9 +118,12 @@
               data-video-type="{{ block.settings.video_url.type }}"
               data-video-id="{{ block.settings.video_url.id }}"
               data-block-id="{{ block.id }}">
-            
+           
+              {% assign video = block.settings.video_url | external_video_tag  | split: 'src="' %}
+ 			  {% assign v  = video[1] | split: '"' %}
+              
               <div class="responsive-video">
-                <iframe width="560" height="315" src="{{block.settings.video_url}}" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="{{ v }}" frameborder="0" allowfullscreen></iframe>
               </div>
 
             
