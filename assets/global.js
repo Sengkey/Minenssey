@@ -721,7 +721,8 @@ class SlideshowComponent extends SliderComponent {
     this.sliderItemsToShow.forEach((item, index) => {
       const video = item.querySelector('video');
       const videoIframe = item.querySelector('iframe');
-      console.log(item)
+      const videoType = item.children[0].childNodes[2].dataset.videoType
+      console.log(videoType)
       const button = item.querySelector('a');
       if (index === this.currentPage - 1) {
         if (button) button.removeAttribute('tabindex');
