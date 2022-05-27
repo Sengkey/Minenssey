@@ -119,9 +119,7 @@
               data-video-id="{{ block.settings.video_url.id }}"
               data-block-id="{{ block.id }}">
            
-              	{% if block.settings.video_url.featured_media.media_type == "external_video" %}
-                  {{ block.settings.video_url.featured_media | external_video_url: loop: "1", muted: "1" |  external_video_tag }}
-                {% endif %}
+              	{{ block.settings.video_url.media_type }}
 
             
           </div>
