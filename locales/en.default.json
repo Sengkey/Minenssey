@@ -288,7 +288,8 @@
       "pause_slideshow": "Pause slideshow",
       "play_slideshow": "Play slideshow",
       "carousel": "Carousel",
-      "slide": "Slide"
+      "slide": "Slide",
+      "video": "Video slide"
     },
     "page": {
       "title": "Page title"
