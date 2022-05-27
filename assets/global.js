@@ -729,11 +729,13 @@ class SlideshowComponent extends SliderComponent {
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
         if (videoType == 'youtube') videoIframe.playVideo();
+        if (videoType == 'vimeo' || videoType == 'mp4') videoIframe.play();
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
         item.setAttribute('tabindex', '-1');
         if (videoType == 'youtube') videoIframe.pauseVideo();
+        if (videoType == 'vimeo' || videoType == 'mp4') videoIframe.pause();
       }
     });
   }
