@@ -728,12 +728,12 @@ class SlideshowComponent extends SliderComponent {
         if (button) button.removeAttribute('tabindex');
         item.setAttribute('aria-hidden', 'false');
         item.removeAttribute('tabindex');
-        if(videoIframe) videoIframe.playVideo();
+        if (videoType == 'youtube') videoIframe.playVideo();
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
         item.setAttribute('tabindex', '-1');
-        if(videoIframe) videoIframe.pauseVideo();
+        if (videoType == 'youtube') videoIframe.pauseVideo();
       }
     });
   }
