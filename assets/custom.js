@@ -2,7 +2,9 @@ $( document ).ready(function() {
   
   
   /* Slideshow */
-  var allSlideshowComponents = $('slideshow-component');
-  console.log(allSlideshowComponents)
+  const allSlideshowComponents = $('slideshow-component');
+  allSlideshowComponents.forEach((slideshow, index) => {
+  console.log(slideshow, index)
+  });
   
 });
