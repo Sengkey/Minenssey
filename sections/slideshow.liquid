@@ -139,7 +139,7 @@
               <div class="responsive-video">
                 {%- if block.settings.video_url.type == "youtube" -%}
               		<iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?color=white&amp;controls=1&amp;enablejsapi=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0"/>
-              	{%- else if block.settings.video_url.type == "vimeo" -%}
+              	{%- elsif block.settings.video_url.type == "vimeo" -%}
                   <iframe
                     frameborder="0"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen="allowfullscreen"
