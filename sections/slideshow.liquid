@@ -117,7 +117,11 @@
             <div class="slideshow__video slideshow__video--{{ block.id }}"
               data-video-type="{{ block.settings.video_url.type }}"
               data-video-id="{{ block.settings.video_url.id }}"
-              data-block-id="{{ block.id }}"></div>
+              data-block-id="{{ block.id }}">
+            
+              {{ block.settings.video_url | external_video_url }}
+            
+          </div>
           {%- endif -%}
           
         </div>
