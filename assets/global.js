@@ -720,6 +720,7 @@ class SlideshowComponent extends SliderComponent {
   setSlideVisibility() {
     this.sliderItemsToShow.forEach((item, index) => {
       const video = item.querySelector('video');
+      const responsiveVideo = item.querySelector('.responsive-video');
       const videoIframe = item.querySelector('iframe');
       const videoType = videoIframe && videoIframe.src.indexOf("https://www.youtube.com") > -1 ? "youtube" : videoIframe && videoIframe.src.indexOf("https://www.vimeo.com") > -1 ? "vimeo" : videoIframe && videoIframe.src.indexOf(".mp4") > -1 ? "mp4" : undefined;
       const isMobile = window.innerWidth < 600;
@@ -731,6 +732,9 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
         if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"play"}', '*');
         if (!isMobile && videoType == 'mp4') video.play();
+        videoIframe.onload = (function () {
+          responsiveVideo.addClass('video-ready');
+      	});
       } else {
         if (button) button.setAttribute('tabindex', '-1');
         item.setAttribute('aria-hidden', 'true');
@@ -738,6 +742,9 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
         if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"pause"}', '*');
         if (!isMobile && videoType == 'mp4') video.pause();
+        videoIframe.onload = (function () {
+          responsiveVideo.removeClass('video-ready');
+      	});
       }
     });
   }
