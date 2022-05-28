@@ -734,9 +734,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.play();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
-            const staticImage = item.children[0].children[1];
-            console.log(staticImage)
-            staticImage.classList.add('is-hidden');
+            item.children[0].children[1].classList.add('is-hidden');
           });
         }
       } else {
@@ -748,7 +746,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.pause();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
-            videoIframe.nextElementSibling.classList.remove('is-hidden');
+            item.children[0].children[1].classList.remove('is-hidden');
           });
         }
       }
