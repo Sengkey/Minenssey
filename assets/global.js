@@ -734,7 +734,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.play();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
-            const staticImage = videoIframe.nextSibling;
+            const staticImage = videoIframe;
             console.log(staticImage)
             staticImage.classList.add('is-hidden');
           });
