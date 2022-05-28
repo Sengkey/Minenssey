@@ -736,7 +736,7 @@ class SlideshowComponent extends SliderComponent {
           console.log("AZZZZ")
           videoIframe.onload = (function () {
             console.log(responsiveVideo,"BBBB")
-            responsiveVideo.classList.addClass('video-ready');
+            item.querySelectorAll('svg, img').addClass('video-ready');
           });
         }
       } else {
@@ -748,7 +748,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.pause();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
-            responsiveVideo.classList.removeClass('video-ready');
+            item.querySelectorAll('svg, img').removeClass('video-ready');
           });
         }
       }
