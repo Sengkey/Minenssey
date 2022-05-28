@@ -8,7 +8,7 @@ $( document ).ready(function() {
     const slideItems = slideshow.querySelectorAll('.slideshow__slide');
     for(let k = 0; k<slideItems.length;k++) {
       const mediaVideo = slideItems[k].querySelector('.slideshow__media .slideshow__video');
-      const videoIframe = mediaVideo.children[0]
+      const videoIframe = mediaVideo.children[0].children[0];
       console.log(videoIframe, i, k)
     }
   }
