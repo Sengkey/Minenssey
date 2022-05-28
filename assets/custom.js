@@ -9,7 +9,7 @@ function onYouTubePlayerStateChange(e) {
 
 $( document ).ready(function() {
   
-  document.addEventListener("onReady", onYouTubePlayerReady() )
+//   document.addEventListener("onReady", onYouTubePlayerReady() )
   
   /* Slideshow */
   const allSlideshowComponents = document.querySelectorAll('slideshow-component');
@@ -20,8 +20,8 @@ $( document ).ready(function() {
       const mediaVideo = slideItems[k].querySelector('.slideshow__media .slideshow__video');
       const videoIframe = mediaVideo.children[0].children[0];
       
-//       videoIframe.on("onReady", onYouTubePlayerReady(e) );
-//       videoIframe.on("onStateChange", onYouTubePlayerStateChange(e) );
+      videoIframe.addEventListener("onReady", onYouTubePlayerReady(e) );
+//       videoIframe.addEventListener("onStateChange", onYouTubePlayerStateChange(e) );
       console.log(videoIframe, i, k)
     }
   }
