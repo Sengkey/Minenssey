@@ -733,7 +733,6 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"play"}', '*');
         if (!isMobile && videoType == 'mp4') video.play();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
-          console.log("AZZZZ")
           videoIframe.onload = (function () {
             videoIframe.style = {{ opacity: 1 }}
           });
