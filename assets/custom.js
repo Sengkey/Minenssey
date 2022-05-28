@@ -9,6 +9,8 @@ function onYouTubePlayerStateChange(e) {
 
 $( document ).ready(function() {
   
+  document.addEventListener("onReady", onYouTubePlayerReady() )
+  
   /* Slideshow */
   const allSlideshowComponents = document.querySelectorAll('slideshow-component');
   for(let i = 0; i<allSlideshowComponents.length;i++) {
