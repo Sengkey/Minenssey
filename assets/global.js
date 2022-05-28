@@ -734,7 +734,9 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.play();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
-            videoIframe.nextSibling.classList.add('is-hidden');
+            const staticImage = videoIframe.nextSibling;
+            console.log(staticImage)
+            staticImage.classList.add('is-hidden');
           });
         }
       } else {
