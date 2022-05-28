@@ -1,5 +1,13 @@
+function onYouTubePlayerReady(e) {
+  console.log("onYouTubePlayerReady",e)
+}
+
+function onYouTubePlayerStateChange(e) {
+  console.log("onYouTubePlayerStateChange",e)
+}
+
+
 $( document ).ready(function() {
-  
   
   /* Slideshow */
   const allSlideshowComponents = document.querySelectorAll('slideshow-component');
@@ -9,6 +17,9 @@ $( document ).ready(function() {
     for(let k = 0; k<slideItems.length;k++) {
       const mediaVideo = slideItems[k].querySelector('.slideshow__media .slideshow__video');
       const videoIframe = mediaVideo.children[0].children[0];
+      
+      videoIframe.addEventListener("onReady", "onYouTubePlayerReady");
+      videoIframe.addEventListener("onStateChange", "onYouTubePlayerStateChange");
       console.log(videoIframe, i, k)
     }
   }
