@@ -11,7 +11,12 @@
 }
 .slideshow__media img,
 .slideshow__media svg.placeholder-svg {
+	opacity: 1;
 	transition: opacity 1s ease;
+}
+.slideshow__media img.is-hidden,
+.slideshow__media svg.placeholder-svg.is-hidden {
+	opacity: 0;
 }
 .responsive-video iframe,
 .responsive-video object,
