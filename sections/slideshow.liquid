@@ -7,7 +7,7 @@
   padding-bottom: 56.25%; /* for 16:9 ratio */
   position: relative;
   height: 0;
-  display: block;
+<!--   display: block; -->
 }
 .responsive-video iframe,
 .responsive-video object,
@@ -19,11 +19,11 @@
   width: 100%;
   height: 100%;
 }
-@media screen and (max-width: 749px) {
-  .responsive-video.video-ready {
+<!-- @media screen and (max-width: 749px) {
+  .responsive-video {
     display: none;
   }
-}
+} -->
 {%- endstyle -%}
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
