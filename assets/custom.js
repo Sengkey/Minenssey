@@ -20,7 +20,7 @@ $( document ).ready(function() {
       const mediaVideo = slideItems[k].querySelector('.slideshow__media .slideshow__video');
       const videoIframe = mediaVideo.children[0].children[0];
       
-      videoIframe.addEventListener("onReady", onYouTubePlayerReady(e) );
+      videoIframe.addEventListener("onReady", onYouTubePlayerReady() );
 //       videoIframe.addEventListener("onStateChange", onYouTubePlayerStateChange(e) );
       console.log(videoIframe, i, k)
     }
