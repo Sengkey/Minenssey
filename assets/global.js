@@ -732,7 +732,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
         if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"play"}', '*');
         if (!isMobile && videoType == 'mp4') video.play();
-        if( videoType == 'youtube' || videoType == 'vimeo' ) {
+        if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
             item.children[0].children[0].classList.remove('is-hidden');
             item.children[0].children[1].classList.add('is-hidden');
@@ -745,7 +745,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
         if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"pause"}', '*');
         if (!isMobile && videoType == 'mp4') video.pause();
-        if( videoType == 'youtube' || videoType == 'vimeo' ) {
+        if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
             item.children[0].children[0].classList.add('is-hidden');
             item.children[0].children[1].classList.remove('is-hidden');
