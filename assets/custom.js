@@ -19,8 +19,8 @@ $( document ).ready(function() {
     for(let k = 0; k<slideItems.length;k++) {
       const mediaVideo = slideItems[k].querySelector('.slideshow__media .slideshow__video');
       const videoIframe = mediaVideo.children[0].children[0];
-      
-      videoIframe.addEventListener("onReady", onYouTubePlayerReady() );
+      // .contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
+      videoIframe.contentWindow.body.addEventListener('onReady',() => console.log('onReady'));
 //       videoIframe.addEventListener("onStateChange", onYouTubePlayerStateChange(e) );
       console.log(videoIframe, i, k)
     }
