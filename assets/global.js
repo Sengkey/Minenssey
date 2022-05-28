@@ -732,7 +732,8 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
         if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"play"}', '*');
         if (!isMobile && videoType == 'mp4') video.play();
-        if(!isMobile && videoType == 'youtube' || !isMobile && videoType == 'vimeo') {
+        if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
+          console.log("AZZZZ")
           videoIframe.onload = (function () {
             responsiveVideo.addClass('video-ready');
           });
@@ -744,7 +745,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'youtube') videoIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
         if (!isMobile && videoType == 'vimeo') videoIframe.contentWindow.postMessage('{"method":"pause"}', '*');
         if (!isMobile && videoType == 'mp4') video.pause();
-        if(!isMobile && videoType == 'youtube' || !isMobile && videoType == 'vimeo') {
+        if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
             responsiveVideo.removeClass('video-ready');
           });
