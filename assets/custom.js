@@ -21,7 +21,7 @@ $( document ).ready(function() {
       const videoIframe = mediaVideo.children[0].children[0];
       // .contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
 //       videoIframe.contentWindow.body.addEventListener('onReady',() => console.log('onReady'));
-      videoIframe.contentWindow.bind("onReady", function (e) {
+      videoIframe.onload = (function () {
           alert('onReady AAA');
       });
 //       videoIframe.addEventListener("onStateChange", onYouTubePlayerStateChange(e) );
