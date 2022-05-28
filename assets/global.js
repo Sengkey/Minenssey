@@ -735,7 +735,7 @@ class SlideshowComponent extends SliderComponent {
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           console.log("AZZZZ")
           videoIframe.onload = (function () {
-            console.log("BBBB")
+            console.log(responsiveVideo,"BBBB")
             responsiveVideo.addClass('video-ready');
           });
         }
