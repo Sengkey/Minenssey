@@ -734,6 +734,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.play();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
+            item.children[0].children[0].classList.remove('is-hidden');
             item.children[0].children[1].classList.add('is-hidden');
           });
         }
@@ -746,6 +747,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.pause();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
+            item.children[0].children[0].classList.add('is-hidden');
             item.children[0].children[1].classList.remove('is-hidden');
           });
         }
