@@ -735,8 +735,8 @@ class SlideshowComponent extends SliderComponent {
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           console.log("AZZZZ")
           videoIframe.onload = (function () {
-            console.log(responsiveVideo,"BBBB")
-            item.querySelectorAll('svg, img').addClass('video-ready');
+            console.log(item.querySelector('svg'),"BBBB")
+            item.querySelector('svg').addClass('video-ready');
           });
         }
       } else {
@@ -748,7 +748,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.pause();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
-            item.querySelectorAll('svg, img').removeClass('video-ready');
+            item.querySelector('svg').removeClass('video-ready');
           });
         }
       }
