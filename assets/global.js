@@ -736,7 +736,7 @@ class SlideshowComponent extends SliderComponent {
           console.log("AZZZZ")
           videoIframe.onload = (function () {
             console.log(responsiveVideo,"BBBB")
-            responsiveVideo.style.display = 'block';
+            responsiveVideo.classList.addClass('video-ready');
           });
         }
       } else {
@@ -748,7 +748,7 @@ class SlideshowComponent extends SliderComponent {
         if (!isMobile && videoType == 'mp4') video.pause();
         if(!isMobile && ( videoType == 'youtube' || videoType == 'vimeo' ) ) {
           videoIframe.onload = (function () {
-            responsiveVideo.style.display = 'none';
+            responsiveVideo.classList.removeClass('video-ready');
           });
         }
       }
